@@ -1,4 +1,4 @@
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ac nibh gravida, fermentum urna eget, iaculis purus. In in commodo turpis. Duis ut arcu eget ante suscipit scelerisque quis ultrices nibh. In porttitor, nisi eget ullamcorper consectetur, erat lorem porttitor orci, at facilisis ex nunc. 
+This repository contains information for best practices for using GitHub as discussed in the April 7, 2022 SAP Science Meeting. 
 
 ## Github Disclaimer
 
