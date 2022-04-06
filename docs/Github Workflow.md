@@ -19,10 +19,10 @@ cd C:/Users/user/Documents/my_git_repo
 git clone <url for repo>
 ```
 The url for your repo can be found by clicking the green Code button on the main page of the repo and it is under the Clone section. 
-![gitclone](docs/img/git_branch.pngimg/clone.PNG)
+![gitclone](/img/git_branch.pngimg/clone.PNG)
 
 If you are using one of the software mentioned above, there will be an option to "Clone a Repository" and you will simply need to paste the url into the box provided. 
-![clonerepovs](docs/img/clone_repo.PNG)
+![clonerepovs](img/clone_repo.PNG)
 
 Once you have the repo cloned onto your computer, you can start making changes and adding files. To make a change, try opening the README.md file and add a brief summary of the purpose of the repository. Save those changes and in the program you are using, it should notify you there is a change to be commited usually by a number over the Git icon. 
 ![commitvs](docs/img/vs_change.PNG)
