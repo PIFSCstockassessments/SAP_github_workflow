@@ -1,5 +1,5 @@
 This repository contains information for best practices for using GitHub as discussed in the April 7, 2022 SAP Science Meeting. 
-[Workflow Document](https://pifscstockassessments.github.io/SAP_github_workflow/docs/Github Workflow.html)
+[Workflow Document](https://pifscstockassessments.github.io/SAP_github_workflow/docs/Github_Workflow.html)
 
 ## Github Disclaimer
 
