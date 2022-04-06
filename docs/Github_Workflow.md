@@ -19,7 +19,7 @@ cd C:/Users/user/Documents/my_git_repo
 git clone <url for repo>
 ```
 The url for your repo can be found by clicking the green Code button on the main page of the repo and it is under the Clone section. 
-![gitclone](img/git_branch.pngimg/clone.PNG)
+![gitclone](img/clone.png)
 
 If you are using one of the software mentioned above, there will be an option to "Clone a Repository" and you will simply need to paste the url into the box provided. 
 ![clonerepovs](img/clone_repo.PNG)
