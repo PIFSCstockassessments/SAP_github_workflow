@@ -19,13 +19,13 @@ cd C:/Users/user/Documents/my_git_repo
 git clone <url for repo>
 ```
 The url for your repo can be found by clicking the green Code button on the main page of the repo and it is under the Clone section. 
-![gitclone](./docs/img/clone.PNG)
+![gitclone](docs/img/clone.PNG)
 
 If you are using one of the software mentioned above, there will be an option to "Clone a Repository" and you will simply need to paste the url into the box provided. 
-![clonerepovs](./docs/img/clone_repo.PNG)
+![clonerepovs](docs/img/clone_repo.PNG)
 
 Once you have the repo cloned onto your computer, you can start making changes and adding files. To make a change, try opening the README.md file and add a brief summary of the purpose of the repository. Save those changes and in the program you are using, it should notify you there is a change to be commited usually by a number over the Git icon. 
-![commitvs](./docs/img/vs_change.PNG)
+![commitvs](docs/img/vs_change.PNG)
 
 Pushing to a repository involves multiple steps. 1) You will stage the change by clicking the `+` next to the file that was changed. 2) Once it is staged, you will need to add a commit message and commit the change. 3) You can push the change. *Note: it is good practice to pull changes from a repo at the beginning of each work session to ensure you have the most updated changes.* Also, committing often can prevent issues if you need to revert back to a previous version and can make it more transparent what changes you made.
 
@@ -36,12 +36,12 @@ If you are committing multiple files, undo the commit and do them individually.
 
 ## Branches 
 Branches allow you to work on code development without affecting code in other branches (including the Main branch). Once you are ready to, you can then merge the development branch into another one using a pull request. A good way to use the branch feature in this workflow is to create a branch for each step of the assessment (e.g. CPUE standardization, Catch data, Model Development, Model Evaluation, etc.) and once that section is finished you can merge everything into the main branch. This will help keep things separated and more organized. Also, submitting a pull request to the main branch will give all team members a chance to see the changes that have been implemented at each stage. 
-![branch](./docs/img/git_branch.PNG)
+![branch](docs/img/git_branch.PNG)
 
 ## Hosting supporting documents on repo website  
 GitHub will create a static website for repositories which will allow you to publish html files. This is useful because if you use RMarkdown files to write up summaries or reports, looking at the .Rmd or .Rmarkdown file directly from GitHub does not provide the full output of the rendered file and you cannot directly view the html file produced. Instead, you can publish the html file on your repo website and then anyone can view the file as it was meant to be read without having to download any files. 
 To host documents on the repo website, you need to first turn on the GitHub Pages site. To do this, go to `Settings` -> `Pages`. Choose the branch and directory for the site to be built from and you can select which theme to use. Once your site is published it will provide the web address of where it is published.
-![pages](./docs/img/githubpages.PNG)
+![pages](docs/img/githubpages.PNG)
  Next, create a file, `index.md` and add links to the documents you would like to display. For example, if you have data exploration summaries in an RMarkdown format that has been knit to an html file, you can add those. Include any text you would like in Markdown syntax and give the link to the file you want published on the website. The first part of the link will be the web address provided by GitHub when it set up the pages (in the figure above it is "https://pifscstockassessments.github.io/MHI_Bottomfish_2023/"). The second part of the link will be the path to the file you want to host relative to the directory from where the website is being published. In the example above, it is published to the main branch and root directory. So the path to the file I want to publish relative to the root (main) directory is `Data_exploration_Rmarkdowns/name_of_file_to_publish.html`. An example of how to include this in the index file is shown below.
 
 ```md

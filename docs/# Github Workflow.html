@@ -1,0 +1,346 @@
+<!DOCTYPE html><html><head>
+      <title># Github Workflow</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      <link rel="stylesheet" href="file:///c:\Users\Megumi.Oshima\.vscode\extensions\shd101wyy.markdown-preview-enhanced-0.6.2\node_modules\@shd101wyy\mume\dependencies\katex\katex.min.css">
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      <style>
+      /**
+ * prism.js Github theme based on GitHub's theme.
+ * @author Sam Clarke
+ */
+code[class*="language-"],
+pre[class*="language-"] {
+  color: #333;
+  background: none;
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1.4;
+
+  -moz-tab-size: 8;
+  -o-tab-size: 8;
+  tab-size: 8;
+
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+  padding: .8em;
+  overflow: auto;
+  /* border: 1px solid #ddd; */
+  border-radius: 3px;
+  /* background: #fff; */
+  background: #f5f5f5;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+  padding: .1em;
+  border-radius: .3em;
+  white-space: normal;
+  background: #f5f5f5;
+}
+
+.token.comment,
+.token.blockquote {
+  color: #969896;
+}
+
+.token.cdata {
+  color: #183691;
+}
+
+.token.doctype,
+.token.punctuation,
+.token.variable,
+.token.macro.property {
+  color: #333;
+}
+
+.token.operator,
+.token.important,
+.token.keyword,
+.token.rule,
+.token.builtin {
+  color: #a71d5d;
+}
+
+.token.string,
+.token.url,
+.token.regex,
+.token.attr-value {
+  color: #183691;
+}
+
+.token.property,
+.token.number,
+.token.boolean,
+.token.entity,
+.token.atrule,
+.token.constant,
+.token.symbol,
+.token.command,
+.token.code {
+  color: #0086b3;
+}
+
+.token.tag,
+.token.selector,
+.token.prolog {
+  color: #63a35c;
+}
+
+.token.function,
+.token.namespace,
+.token.pseudo-element,
+.token.class,
+.token.class-name,
+.token.pseudo-class,
+.token.id,
+.token.url-reference .token.variable,
+.token.attr-name {
+  color: #795da3;
+}
+
+.token.entity {
+  cursor: help;
+}
+
+.token.title,
+.token.title .token.punctuation {
+  font-weight: bold;
+  color: #1d3e81;
+}
+
+.token.list {
+  color: #ed6a43;
+}
+
+.token.inserted {
+  background-color: #eaffea;
+  color: #55a532;
+}
+
+.token.deleted {
+  background-color: #ffecec;
+  color: #bd2c00;
+}
+
+.token.bold {
+  font-weight: bold;
+}
+
+.token.italic {
+  font-style: italic;
+}
+
+
+/* JSON */
+.language-json .token.property {
+  color: #183691;
+}
+
+.language-markup .token.tag .token.punctuation {
+  color: #333;
+}
+
+/* CSS */
+code.language-css,
+.language-css .token.function {
+  color: #0086b3;
+}
+
+/* YAML */
+.language-yaml .token.atrule {
+  color: #63a35c;
+}
+
+code.language-yaml {
+  color: #183691;
+}
+
+/* Ruby */
+.language-ruby .token.function {
+  color: #333;
+}
+
+/* Markdown */
+.language-markdown .token.url {
+  color: #795da3;
+}
+
+/* Makefile */
+.language-makefile .token.symbol {
+  color: #795da3;
+}
+
+.language-makefile .token.variable {
+  color: #183691;
+}
+
+.language-makefile .token.builtin {
+  color: #0086b3;
+}
+
+/* Bash */
+.language-bash .token.keyword {
+  color: #0086b3;
+}
+
+/* highlight */
+pre[data-line] {
+  position: relative;
+  padding: 1em 0 1em 3em;
+}
+pre[data-line] .line-highlight-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+  display: block;
+  width: 100%;
+}
+
+pre[data-line] .line-highlight {
+  position: absolute;
+  left: 0;
+  right: 0;
+  padding: inherit 0;
+  margin-top: 1em;
+  background: hsla(24, 20%, 50%,.08);
+  background: linear-gradient(to right, hsla(24, 20%, 50%,.1) 70%, hsla(24, 20%, 50%,0));
+  pointer-events: none;
+  line-height: inherit;
+  white-space: pre;
+}
+
+pre[data-line] .line-highlight:before, 
+pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-start);
+  position: absolute;
+  top: .4em;
+  left: .6em;
+  min-width: 1em;
+  padding: 0 .5em;
+  background-color: hsla(24, 20%, 50%,.4);
+  color: hsl(24, 20%, 95%);
+  font: bold 65%/1.5 sans-serif;
+  text-align: center;
+  vertical-align: .3em;
+  border-radius: 999px;
+  text-shadow: none;
+  box-shadow: 0 1px white;
+}
+
+pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-end);
+  top: auto;
+  bottom: .4em;
+}html body{font-family:"Helvetica Neue",Helvetica,"Segoe UI",Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ul,html body>ol{margin-bottom:16px}html body ul,html body ol{padding-left:2em}html body ul.no-list,html body ol.no-list{padding:0;list-style-type:none}html body ul ul,html body ul ol,html body ol ol,html body ol ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;background-color:#f0f0f0;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:bold;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:bold}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em !important;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::before,html body code::after{letter-spacing:-0.2em;content:"\00a0"}html body pre>code{padding:0;margin:0;font-size:.85em !important;word-break:normal;white-space:pre;background:transparent;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;font-size:.85em !important;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:before,html body pre tt:before,html body pre code:after,html body pre tt:after{content:normal}html body p,html body blockquote,html body ul,html body ol,html body dl,html body pre{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body pre,html body code{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview .pagebreak,.markdown-preview .newpage{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center !important}.markdown-preview:not([for="preview"]) .code-chunk .btn-group{display:none}.markdown-preview:not([for="preview"]) .code-chunk .status{display:none}.markdown-preview:not([for="preview"]) .code-chunk .output-div{margin-bottom:16px}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0}@media screen and (min-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{font-size:14px !important;padding:1em}}@media print{html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,0.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{padding:0 1.6em;margin-top:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc li{margin-bottom:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{list-style-type:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% -  300px);padding:2em calc(50% - 457px -  150px);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+
+      </style>
+    </head>
+    <body for="html-export">
+      <div class="mume markdown-preview  ">
+      <h1 class="mume-header" id="github-workflow">Github Workflow</h1>
+
+<h2 class="mume-header" id="setting-up-a-repository">Setting up a repository</h2>
+
+<p>To initiate a repository, go to the <a href="https://github.com/PIFSCstockassessments">PIFSCstockassessments page</a> and click <code>New</code>. Set it up using the pifsc-repo-template, which will automatically populate a <a href="http://README.md">README.md</a> file with the NOAA disclaimer, a <a href="http://LICENSE.md">LICENSE.md</a> file, and a .gitignore template for R.</p>
+<h2 class="mume-header" id="software-to-use-with-github">Software to use with GitHub</h2>
+
+<p>Git is a version control system where you can manage and keep track of code history and GitHub is a service to manage Git repositories. There are many ways to interface with GitHub, you can go straight from command line or use a third-party software to help push and pull changes. Some good options are:</p>
+<ul>
+<li>Git for Windows (base Git tool for Windows users)</li>
+<li>GitHub desktop</li>
+<li>Visual Studio Code (this is free, open source code editor that has git commands built in)</li>
+<li>RStudio (you can set up git integration in RStudio and push and pull straight from the IDE)</li>
+<li>GitKraken (software meant specifically for Git)</li>
+</ul>
+<h2 class="mume-header" id="suggested-workflow">Suggested workflow</h2>
+
+<p>Once you have a repo set up and are ready to start making changes, you can make your first commit. First you will need to clone the repository onto your computer. There are multiple ways to achieve this. If you are using command line you will navigate to where you want to keep the repository on your computer and use the git clone command. It should look something like this:</p>
+<pre data-role="codeBlock" data-info class="language-"><code>cd C:/Users/user/Documents/my_git_repo
+
+git clone &lt;url for repo&gt;
+</code></pre><p>The url for your repo can be found by clicking the green Code button on the main page of the repo and it is under the Clone section.<br>
+<img src="docs/img/clone.PNG" alt="gitclone"></p>
+<p>If you are using one of the software mentioned above, there will be an option to &quot;Clone a Repository&quot; and you will simply need to paste the url into the box provided.<br>
+<img src="docs/img/clone_repo.PNG" alt="clonerepovs"></p>
+<p>Once you have the repo cloned onto your computer, you can start making changes and adding files. To make a change, try opening the <a href="http://README.md">README.md</a> file and add a brief summary of the purpose of the repository. Save those changes and in the program you are using, it should notify you there is a change to be commited usually by a number over the Git icon.<br>
+<img src="docs/img/vs_change.PNG" alt="commitvs"></p>
+<p>Pushing to a repository involves multiple steps. 1) You will stage the change by clicking the <code>+</code> next to the file that was changed. 2) Once it is staged, you will need to add a commit message and commit the change. 3) You can push the change. <em>Note: it is good practice to pull changes from a repo at the beginning of each work session to ensure you have the most updated changes.</em> Also, committing often can prevent issues if you need to revert back to a previous version and can make it more transparent what changes you made.</p>
+<h3 class="mume-header" id="troubleshooting-commits">Troubleshooting Commits</h3>
+
+<p>If you have an issue, try pulling changes first then pushing your changes.<br>
+If you still cannot push your changes, make sure your file sizes are not too large. A lot of stock assessment model files can get pretty large so if they are not crucial to someone running the code, do not include them in your commits.<br>
+If you are committing multiple files, undo the commit and do them individually.</p>
+<h2 class="mume-header" id="branches">Branches</h2>
+
+<p>Branches allow you to work on code development without affecting code in other branches (including the Main branch). Once you are ready to, you can then merge the development branch into another one using a pull request. A good way to use the branch feature in this workflow is to create a branch for each step of the assessment (e.g. CPUE standardization, Catch data, Model Development, Model Evaluation, etc.) and once that section is finished you can merge everything into the main branch. This will help keep things separated and more organized. Also, submitting a pull request to the main branch will give all team members a chance to see the changes that have been implemented at each stage.<br>
+<img src="docs/img/git_branch.PNG" alt="branch"></p>
+<h2 class="mume-header" id="hosting-supporting-documents-on-repo-website">Hosting supporting documents on repo website</h2>
+
+<p>GitHub will create a static website for repositories which will allow you to publish html files. This is useful because if you use RMarkdown files to write up summaries or reports, looking at the .Rmd or .Rmarkdown file directly from GitHub does not provide the full output of the rendered file and you cannot directly view the html file produced. Instead, you can publish the html file on your repo website and then anyone can view the file as it was meant to be read without having to download any files.<br>
+To host documents on the repo website, you need to first turn on the GitHub Pages site. To do this, go to <code>Settings</code> -&gt; <code>Pages</code>. Choose the branch and directory for the site to be built from and you can select which theme to use. Once your site is published it will provide the web address of where it is published.<br>
+<img src="docs/img/githubpages.PNG" alt="pages"><br>
+Next, create a file, <code>index.md</code> and add links to the documents you would like to display. For example, if you have data exploration summaries in an RMarkdown format that has been knit to an html file, you can add those. Include any text you would like in Markdown syntax and give the link to the file you want published on the website. The first part of the link will be the web address provided by GitHub when it set up the pages (in the figure above it is &quot;<a href="https://pifscstockassessments.github.io/MHI_Bottomfish_2023/">https://pifscstockassessments.github.io/MHI_Bottomfish_2023/</a>&quot;). The second part of the link will be the path to the file you want to host relative to the directory from where the website is being published. In the example above, it is published to the main branch and root directory. So the path to the file I want to publish relative to the root (main) directory is <code>Data_exploration_Rmarkdowns/name_of_file_to_publish.html</code>. An example of how to include this in the index file is shown below.</p>
+<pre data-role="codeBlock" data-info="md" class="language-gfm"><code> 1. [BFISH Opaka Length Frequency Investigations]( https://pifscstockassessments.github.io/MHI_Bottomfish_2023/Data_exploration_Rmarkdowns/BFISH_Length_Comp.html)
+</code></pre><h3>Suggested Dos and Don&apos;ts</h3>
+<p>Based on previous assessments and discussion among the SAP team, here are some recommended Dos and Don&apos;ts for scripts and GitHub. These guidelines are meant to keep all files portable (no hardcoded paths), transparent, and easy to follow/implement.</p>
+<p><strong>DO:</strong></p>
+<ul>
+<li>Split up data, scripts, and outputs (graphs, tables, etc.) into separate folders (subfolders can be created if necessary)</li>
+<li>Label script files clearly according to their purpose and order if used in a sequence (e.g. Catch_01_prep_data.R)</li>
+<li>use relative paths to files (e.g. &quot;./Data/catch.csv&quot;)</li>
+<li>use RProject to create an R environment specifically for this project (check out the r package <code>here</code> for easily creating relative paths within a project)</li>
+<li>use the .gitignore file to keep artifact files, sensitive data, large files, or R environments from being pushed to the repo</li>
+</ul>
+<p><strong>DON&apos;T:</strong></p>
+<ul>
+<li>Don&apos;t write dates in the file names (e.g. Catch_01012020.R)</li>
+<li>Don&apos;t set working directory in the script</li>
+<li>Don&apos;t clear the environment <code>rm(ls())</code> within the script</li>
+</ul>
+<h2>Dealing with Confidential Data</h2>
+<p>Dealing with data that is confidential can be tricky when trying to make code publicly available. Some suggestions are to:</p>
+<ul>
+<li>Create a separate folder that only contains confidential data and add this folder to the gitignore file.</li>
+<li>Use a common filename structure (i.e. *_CON.csv) for all files that are confidential. This allows you to add that file name to the gitignore file, creating a second check that it will not be pushed to the repository as well as helping to identify that data set as confidential to other collaborators.</li>
+<li>Use R packages such as keyring to store credentials such as username and passwords that you do not want to write out in your code</li>
+<li>Use R packages such as dotenv to create variables for your environment that hides the name or link to confidential data</li>
+<li>Remember, the data is confidential but what you do to the data is not, so keep the initial prep script short and create a non-confidential version of the dataset that can be shared on the repo</li>
+</ul>
+
+      </div>
+      
+      
+    
+    
+    
+    
+    
+    
+    
+    
+  
+    </body></html>
