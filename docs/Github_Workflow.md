@@ -19,7 +19,7 @@ cd C:/Users/user/Documents/my_git_repo
 git clone <url for repo>
 ```
 The url for your repo can be found by clicking the green Code button on the main page of the repo and it is under the Clone section. 
-![gitclone](img/clone.png)
+![gitclone](img/clone.PNG)
 
 If you are using one of the software mentioned above, there will be an option to "Clone a Repository" and you will simply need to paste the url into the box provided. 
 ![clonerepovs](img/clone_repo.PNG)
@@ -36,7 +36,7 @@ If you are committing multiple files, undo the commit and do them individually.
 
 ## Branches 
 Branches allow you to work on code development without affecting code in other branches (including the Main branch). Once you are ready to, you can then merge the development branch into another one using a pull request. A good way to use the branch feature in this workflow is to create a branch for each step of the assessment (e.g. CPUE standardization, Catch data, Model Development, Model Evaluation, etc.) and once that section is finished you can merge everything into the main branch. This will help keep things separated and more organized. Also, submitting a pull request to the main branch will give all team members a chance to see the changes that have been implemented at each stage. 
-![branch](img/git_branch.PNG)
+![branch](img/git_branch.png)
 
 ## Hosting supporting documents on repo website  
 GitHub will create a static website for repositories which will allow you to publish html files. This is useful because if you use RMarkdown files to write up summaries or reports, looking at the .Rmd or .Rmarkdown file directly from GitHub does not provide the full output of the rendered file and you cannot directly view the html file produced. Instead, you can publish the html file on your repo website and then anyone can view the file as it was meant to be read without having to download any files. 
